@@ -128,6 +128,13 @@ public class Main {
             System.out.println(user+" has won!");
             return true;
         }
+        //tie-game
+        int counter=0;
+        for(char[] i:gameBoard) for(char j:i) if(j==' ') counter++;
+        if(counter==0) {
+            System.out.println("Tie Game!");
+            return true;
+        }
         return false;
     }
 }
